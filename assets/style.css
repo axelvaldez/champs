@@ -219,5 +219,5 @@ h1 {
   font-size: 3rem !important;
   width: 3rem !important;
   height: 3rem !important;
-  text-shadow: none;
+  text-shadow: none !important;
 }
