@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  background: #ff5400;
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 5rem 3rem 3rem;
+  width: 100%;
+  max-width: 1100px;
+  text-transform: uppercase;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #fff;
+  color: #ff5400;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 1rem 3rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+nav li {
+  margin-right: 2rem;
+}
+
+nav li:last-child {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+nav a {
+  color: #ff5400;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card {
+  border: 10px solid #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 3rem 0;
+}
+
+.card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card .big {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.card .image {
+  margin: 0;
+  position: relative;
+}
+
+.card .image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card img.badge {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 80px;
+  height: auto;
+}
+
+.quote {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.quote+p {
+  text-align: center;
+}
+
+.togglenav {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  z-index: 10;
+  display: none;
+}
+
+#confetti-canvas {
+  display: block;
+  z-index: 999999;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 1120px) {
+  .card {
+    display: block;
+    max-width: 500px;
+    margin: 3rem auto;
+  }
+  .card .text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .togglenav {
+    display: block;
+  }
+  .togglenav :last-child {
+    display: none;
+  }
+  .showmenu .togglenav :last-child {
+    display: block;
+  }
+  .showmenu .togglenav :first-child {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+  .showmenu nav {
+    display: block;
+  }
+  nav ul {
+    display: block;
+  }
+  nav li {
+    margin-bottom: .5rem;
+  }
+  nav li:last-child {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+  nav li span {
+    display: inline-block;
+    width: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .card .text {
+    font-size: 1rem;
+  }
+  .card .big {
+    font-size: 3rem;
+  }
+  .quote {
+    width: 80%;
+  }
+}
